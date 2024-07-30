@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Sign-Up Sheet</title>
+</head>
+<body>
+    <div class="imageSide">
+        <img class= "jungleImage" src="res/halie-west-25xggax4bSA-unsplash.jpg" alt="Jungle Background">
+        <div class="odinLogoDiv">
+            <div>
+                <img class="odinImage" src="res/odin-lined.png" alt = "Odin Logo">
+            </div>
+            <span class="odinLogoText"> ODIN </span>
+        </div>
+    </div>
+    <div class="formSide">
+        <div class = "formHeader">
+            <div class="formHeaderText">
+                <h3>
+                    This is not a real online service! 
+                    You know you need something 
+                    <br>
+                    like this in your life to help you realize your deepest dreams. 
+                    <br>
+                    Sign up <em>now</em> to get started.
+                    <br>
+                    <br>
+                    You <em>know</em> you want to.
+                </h3>
+            </div>
+        </div>
+        <div class="formInput">
+            <h3>Lets do this!</h3>
+            <form action="singupaction.com">
+                <table class="formTable">
+                    <tr>
+                        <th class="formLabelText">
+                            <label for="first_name_input">FIRST NAME</label>
+                        </th>
+                        <th class="formLabelText">
+                            <label for="last_name_input">LAST NAME</label>
+                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="formInputRow">
+                            <input class="formInputBox" type="text" id="first_name_input" placeholder="Joe" required>
+                        </th>
+                        <th class="formInputRow">
+                            <input class="formInputBox" type="text" id="last_name_input" placeholder="Vandal">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="formLabelText">
+                            <label for="email_input">EMAIL</label>
+                        </th>
+                        <th class="formLabelText">
+                            <label for="phone_input">PHONE NUMBER</label>
+                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="formInputRow">
+                            <input class="formInputBox" type="email" id="email_input" placeholder="JoeVandal@uidaho.edu">
+                        </th>
+                        <th class="formInputRow">
+                            <input class="formInputBox" type="text" id="phone_input" placeholder="2087777777" pattern="^[0-9]{10}$">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="formLabelText">
+                            <label for="password_input">PASSWORD</label>
+                        </th>
+                        <th class="formLabelText">
+                            <label for="confirm_password_input">CONFIRM PASSWORD</label>
+                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="formInputRow">
+                            <input class="formInputBox" type="password" id="password_input" required>
+                        </th>
+                        <th class="formInputRow">
+                            <input class="formInputBox" type="password" id="confirm_password_input" required>
+                        </th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="formFooter">
+            <div class="footerContentDiv">
+                <button class="createAccountButton">Create Account</button>
+                <div class="alreadyHaveAccount">
+                    Already have an account? 
+                    <span class="alreadyHaveAccountLogin">Log in</span>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

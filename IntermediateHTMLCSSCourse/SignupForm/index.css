@@ -1,0 +1,200 @@
+/* override font default and global varaibles to be used in file */
+:root {
+    --image-width: 40vw;
+    --input-section-width: 60vw;
+    --input-section-height: 33vh;
+    --odin-image-div-height: calc(var(--input-section-height) / 2);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* left 40% of screen */
+.imageSide {
+    width: 40vw;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* specific image styling */
+.jungleImage {
+    width: var(--image-width);
+    height: 100vh;
+}
+
+.odinImage {
+    max-width: calc(var(--image-width) / 5);
+    max-height: calc(var(--odin-image-div-height) - 1vh);
+}
+/* Black div that contains Odin logo and logo text*/
+.odinLogoDiv {
+    width: var(--image-width);
+    height: var(--odin-image-div-height);
+    padding: inherit;
+    position: absolute;
+    top: calc(var(--input-section-height) / 2);
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Using RGBA appears to be the only way for a child to not inherit opacity??*/
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+/* Custom loaded font*/
+@font-face {
+    font-family: NorseBold;
+    src: url("./res/Norse-Bold.otf");
+} 
+
+.odinLogoText {
+    font-family: "NorseBold";
+    color: #ffffff;
+    font-size: 6rem;
+}
+
+/* Contains right 60% of screen for formHeader, formInput, and formFooter*/
+.formSide {
+    width: var(--input-section-width);
+    height: 100vh;
+    width: var(--input-section-width);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 40vw;
+}
+
+/* upper 3rd right side */
+.formHeader {
+    background-color: #ececec;
+    height: var(--input-section-height);
+    width: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* upper 3rd right side text*/
+.formHeaderText {
+    background-color: inherit;
+    height: calc(inherit / 2);
+    width: inherit;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: calc(var(--input-section-height) / 2);
+}
+
+/* center 3rd right side */
+.formInput {
+    background-color: #fffdfd;
+    height: var(--input-section-height);
+    width: inherit;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: var(--input-section-height);
+    left: 0;
+}
+
+/* lower 3rd right side */
+.formFooter {
+    background-color: #ececec;
+    /* fill footer to bottom of screen*/
+    height: var(--input-section-height);
+    width: inherit;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: calc(var(--input-section-height) * 2);
+    left: 0;
+}
+
+/* Table styling */
+.formTable {
+    text-align: left;
+}
+
+.formInputRow {
+    padding-bottom: calc(var(--input-section-height) / 16);
+    padding-right: 5vw;
+}
+
+.formLabelText {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #313131;
+}
+
+/* Override default input styling and add valid and invalid options*/
+.formInputBox {
+    border: 1px solid;
+    border-color: #E5E7EB;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    width: calc(var(--input-section-width) / 3);
+    height: 2vh;
+  }
+
+  /* 
+  NOTE: focus does not appear to be working. 
+  I have tested in and outside of form/div and cannot figure out why.
+  Default styling is used when the buttons are focused.
+  */
+
+.formInputBox:focus {
+    border: 1px solid;
+    border-color: #4456a8;
+}
+  
+.formInputBox:invalid {
+    border: 1px solid;
+    border-color: #dd7171;
+}
+  
+.formInputBox:valid {
+    border: 1px solid;
+    border-color: #4da54d;
+}
+
+/* create account button */
+.footerContentDiv {
+    padding-top: 4vh;
+}
+.createAccountButton {
+    background-color: #596D48;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+    font: bold 1.2rem Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    width: calc(var(--input-section-width) / 3 - 15px);
+    height: 60px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+.alreadyHaveAccount {
+    padding-top: 4vh;
+    font: 1.2rem Arial, Helvetica, sans-serif;
+}
+
+/* Log in text styling */
+.alreadyHaveAccountLogin {
+    color: #596D48;
+    font: bold 1.2rem Arial, Helvetica, sans-serif;
+}
