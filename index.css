@@ -2,6 +2,8 @@
     --image-width: 40vw;
     --input-section-width: 60vw;
     --input-section-height: 30vh;
+    --odin-image-div-height: calc(var(--input-section-height) / 2);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imageSide {
@@ -21,6 +23,41 @@
     height: 100vh;
 }
 
+.odinImage {
+    max-width: calc(var(--image-width) / 5);
+    max-height: calc(var(--odin-image-div-height) - 1vh);
+    padding-left: 10vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    
+}
+.odinLogoDiv {
+    width: var(--image-width);
+    height: var(--odin-image-div-height);
+    padding: inherit;
+    position: absolute;
+    top: calc(var(--input-section-height) / 2);
+    left: 0;
+    background-color: black;
+    
+}
+
+@font-face {
+    font-family: NorseBold;
+    src: url("./res/Norse-Bold.otf");
+} 
+
+.odinLogoText {
+    font-family: "NorseBold";
+    color: #ffffff;
+    font-size: 6em;
+    position: absolute;
+    left: calc(var(--image-width) / 2);
+    top: 0;
+    opacity: 1;
+}
+
 .formSide {
     width: var(--input-section-width);
     height: 100vh;
@@ -35,7 +72,7 @@
 }
 
 .formHeader {
-    background-color: rgb(201, 201, 201);
+    background-color: #c9c9c9;
     height: var(--input-section-height);
     width: inherit;
     padding-left: 0;
@@ -58,7 +95,7 @@
 }
 
 .formInput {
-    background-color: rgb(233, 233, 233);
+    background-color: #e9e9e9;
     height: var(--input-section-height);
     width: inherit;
     padding-left: 5%;
@@ -69,7 +106,7 @@
 }
 
 .formFooter {
-    background-color: rgb(201, 201, 201);
+    background-color: #c9c9c9;
     height: var(--input-section-height);
     width: inherit;
     padding-left: 0;
