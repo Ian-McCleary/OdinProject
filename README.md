@@ -1,6 +1,6 @@
 # Description
 The Odin Project
 # Links
-https://www.theodinproject.com/paths/full-stack-javascript/
-https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript
-https://www.theodinproject.com/paths/full-stack-javascript/courses/react
+1. https://www.theodinproject.com/paths/full-stack-javascript/
+2. https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript
+3. https://www.theodinproject.com/paths/full-stack-javascript/courses/react
