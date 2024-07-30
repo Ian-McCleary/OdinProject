@@ -1,0 +1,82 @@
+:root {
+    --image-width: 40vw;
+    --input-section-width: 60vw;
+    --input-section-height: 30vh;
+}
+
+.imageSide {
+    width: 40vw;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jungleImage {
+    width: var(--image-width);
+    height: 100vh;
+}
+
+.formSide {
+    width: var(--input-section-width);
+    height: 100vh;
+    width: var(--input-section-width);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 40vw;
+}
+
+.formHeader {
+    background-color: rgb(201, 201, 201);
+    height: var(--input-section-height);
+    width: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.formHeaderText {
+    background-color: inherit;
+    height: calc(inherit / 2);
+    width: inherit;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: calc(var(--input-section-height) / 2);
+}
+
+.formInput {
+    background-color: rgb(233, 233, 233);
+    height: var(--input-section-height);
+    width: inherit;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: var(--input-section-height);
+    left: 0;
+}
+
+.formFooter {
+    background-color: rgb(201, 201, 201);
+    height: var(--input-section-height);
+    width: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: calc(var(--input-section-height) * 2);
+    left: 0;
+}
