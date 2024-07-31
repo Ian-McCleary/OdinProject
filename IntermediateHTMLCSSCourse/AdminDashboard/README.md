@@ -33,4 +33,4 @@ Step 6: Section feedback
 Before you move on, we would love it if you could submit your feedback on the Intermediate HTML and CSS course.
 
 ### Objective Image
-![Goal to replicate](IntermediateHTMLCSSCourse\AdminDashboard\res\dashboard-project.png)
+![Goal to replicate](res\dashboard-project.png)
