@@ -1,6 +1,9 @@
 /* override font default and global varaibles to be used in file */
 :root {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    --user-bg-color: rgb(217, 237, 255);
+    --side-bar-color: #11a5d6;
 }
 
 /* Main grids for application */
@@ -10,25 +13,142 @@
     height: 100vh;
     grid-template-columns: 8fr 40fr;
     grid-template-rows: 15fr 90fr;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--user-bg-color);
 }
 
 /* grid content inside mainApp */
-.sidebar {
-    background-color: lightblue;
+/* side bar styling */
+.sideBar {
+    background-color: var(--side-bar-color);
     grid-row-start: 1;
     grid-row-end: 3;
+    display: grid;
+    grid-template-rows: repeat(24, clamp(10px, 4%, 100px));
+    gap: 5px;
+    padding: 25px;
 }
 
-.header {
-    background-color: lightgreen;
+/* Dashboard sidebar grid space has larger text and more space */
+.sideBarDashboard {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    padding: 5px;
+    font: bold 1.5rem Arial;
+    color: white;
+    gap: 10px;
 }
+
+.sideBarDashboardText {
+    font: bold 2rem Arial;
+    color: white;
+}
+
+.sideBarItem {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    gap: 20px;
+}
+
+.sideBarText {
+    font: bold 1.1rem Arial;
+    color: white;
+}
+
+/* icons */
+span.sideBarIconSmall {
+    color: white;
+    font-size: 30px;
+    margin-top: -6px;
+}
+
+span.sideBarIconLarge {
+    color: white;
+    font-size: 50px;
+    margin-top: -10px;
+    margin-left: -15px;
+}
+
+/* header layout */
+.header {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.headerLeftColumn {
+    display: grid;
+    grid-template-rows: 4fr 6fr;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+/* inside header left column */
+.headerSearchGrid {
+    display: grid;
+    grid-template-columns: 0.8fr 9fr;
+}
+
+.headerCurrentUserGrid {
+    display: grid;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-columns: 0.1fr 0.9fr;
+}
+
+.headerCurrentUserImageCell {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-right: 20px;
+}
+
+.headerCurrentUserImage {
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+}
+
+.headerHelloMessage {
+    font: bold 1.1rem Arial;
+}
+
+.headerUsernameMessage {
+    font: bold 2rem Arial;
+}
+
+/* header right column */
+.headerRightColumn {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-right: 60px;
+    padding-bottom: 40px;
+}
+
+button {
+    background-color: var(--side-bar-color);
+    font: bold 1.1rem Arial;
+    color: white;
+    border: 0px;
+    border-radius: 40px;
+    width: 100px;
+    height: 40px;
+}
+
+/* Search bar at top of screen */
+input {
+    border-radius: 40px;
+    width: 650px;
+    height: 30px;
+    background-color: rgb(233, 233, 233);
+    border-color: rgba(0, 0, 0, 0);
+}
+
 
 .mainContent {
-    background-color: lightcoral;
     display: grid;
     grid-template-columns: 7fr 3fr;
     grid-template-rows: repeat(2, 1fr);
@@ -36,11 +156,18 @@
 
 /* Grid content in mainContent */
 .feed {
-    background-color: blanchedalmond;
+    background-color: var(--user-bg-color);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 9fr;
-    gap: 25px;
+    grid-template-rows: 0.1fr 9fr;
+    gap: 10px;
+    padding-top: 45px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.feedTitle {
+    font: bold 1.4rem Arial;
 }
 
 .feedContent {
@@ -48,15 +175,22 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
-    background-color: chartreuse;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Text feed items for Announcements*/
 .feedItemText {
     display: grid;
-    grid-template-columns: 0.1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 0.9fr;
-    background-color: pink;
+    border: 3px;
+    border-bottom: 3px;
+    border-color: black;
 
 }
 
@@ -64,18 +198,25 @@
 .feedItemIconWithText {
     display: grid;
     grid-template-columns: 0.1fr 0.9fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 0.8fr;
 }
 
 /* icon grid cell for Trending tab*/
-.feedIcon {
+.feedIconCell {
     grid-row-start: 1;
     grid-row-end: 3;
-    background-color: yellow;
+    padding-right: 10px;
+}
+
+.feedIcon {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
 }
 
 .announcementHeader {
     font: bold 1rem Arial;
+    padding-bottom: 5px;
 }
 
 .announcementBody {
@@ -83,7 +224,7 @@
 }
 
 .projects {
-    background-color: aquamarine;
+    background-color: var(--user-bg-color);
     grid-row-start: 1;
     grid-row-end: 3;
     display: grid;
@@ -95,11 +236,56 @@
 
 /* Different project grid cells*/
 .projectsHeader {
-    background-color: aliceblue;
     grid-column-start: 1;
     grid-column-end: 3;
+    font: bold 1.4rem Arial;
 }
 
 .project {
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 0.1fr 9.9fr;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.projectContent {
+    display: grid;
+    grid-template-rows: 0.4fr 4fr 2fr;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.projectTitle {
+    font: bold 1.1rem Arial;
+
+}
+
+.projectDescription {
+    font: 1rem Arial;
+    color: rgb(46, 46, 46);
+}
+
+.projectIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: right;
+    column-gap: 30px;
+}
+
+.projectIconImage {
+    position: sticky;
+    right: 0;
+    background-color: white;
+    padding-right: 10px;
+}
+
+.projectStripe {
+    background-color: orange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 7px;
 }
