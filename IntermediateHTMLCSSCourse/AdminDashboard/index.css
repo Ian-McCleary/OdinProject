@@ -2,6 +2,7 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Main grids for application */
 .mainApp {
     display: grid;
@@ -51,16 +52,32 @@
 }
 
 /* Text feed items for Announcements*/
-.feedItemText{
+.feedItemText {
     display: grid;
     grid-template-columns: 0.1fr;
     grid-template-rows: 0.1fr 0.9fr;
     background-color: pink;
 
 }
+
+/* Icon feed items with text */
+.feedItemIconWithText {
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* icon grid cell for Trending tab*/
+.feedIcon {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: yellow;
+}
+
 .announcementHeader {
     font: bold 1rem Arial;
 }
+
 .announcementBody {
     font: normal 0.9rem Arial;
 }
