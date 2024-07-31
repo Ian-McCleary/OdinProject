@@ -1,0 +1,88 @@
+/* override font default and global varaibles to be used in file */
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Main grids for application */
+.mainApp {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 8fr 40fr;
+    grid-template-rows: 15fr 90fr;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* grid content inside mainApp */
+.sidebar {
+    background-color: lightblue;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.header {
+    background-color: lightgreen;
+}
+
+.mainContent {
+    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Grid content in mainContent */
+.feed {
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr;
+    gap: 25px;
+}
+
+.feedContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    background-color: chartreuse;
+}
+
+/* Text feed items for Announcements*/
+.feedItemText{
+    display: grid;
+    grid-template-columns: 0.1fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    background-color: pink;
+
+}
+.announcementHeader {
+    font: bold 1rem Arial;
+}
+.announcementBody {
+    font: normal 0.9rem Arial;
+}
+
+.projects {
+    background-color: aquamarine;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 10fr 10fr 10fr;
+    gap: 25px;
+    padding: 25px;
+}
+
+/* Different project grid cells*/
+.projectsHeader {
+    background-color: aliceblue;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.project {
+    background-color: blue;
+}
