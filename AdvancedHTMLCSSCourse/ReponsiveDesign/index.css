@@ -1,0 +1,282 @@
+/* global vars */
+:root {
+    --bg-color: rgb(26, 143, 163);
+    --side-padding: 50px;
+    --top-bot-padding: 25px;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 0.1fr 0.2fr 0.1fr;
+
+}
+
+/* main site sections */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    padding-top: var(--top-bot-padding);
+    padding-bottom: var(--top-bot-padding);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 1.5fr 1.5fr;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    padding-top: var(--top-bot-padding);
+    padding-bottom: var(--top-bot-padding);
+    gap: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    padding-top: var(--top-bot-padding);
+    padding-bottom: var(--top-bot-padding);
+    position: relative;
+}
+
+/* header subsections */
+.headerImageContainer {
+    background-size: cover;
+    background-position: center;
+    width: 85%;
+    height: 300px;
+    max-width: 300px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    background-image: url("res/pfp.jpg");
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.headerImageText {
+    font: 2rem "Playfair Display";
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: inherit;
+    padding: 5px;
+    row-gap: 15px;
+    font: 1rem "Roboto";
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aboutMeHeader {
+    font: 2rem "Playfair Display";
+    padding-bottom: 5px;
+}
+
+/* mainContent subsections */
+
+.myWorkHeader {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font: 2rem "Playfair Display";
+}
+
+.project {
+    display: grid;
+    grid-template-rows: 6fr 1fr 3fr;
+    gap: 5px;
+    max-width: 700px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.projectPhoto {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 25px;
+    background-image: url("res/pcb.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: auto;
+}
+
+.projectTitle {
+    display: grid;
+    grid-template-columns: 8fr 0.1fr 0.1fr;
+    gap: 10px;
+    font: 1.1rem "Playfair Display";
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.projectDescription {
+    font: 1rem "Roboto";
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* footer subsections */
+.contactMeContainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: var(--side-padding);
+    font: 1rem "Roboto";
+    color: white;
+    padding-bottom: 20px;
+}
+
+.contactMeImageContainer {
+    background-size: cover;
+    background-position: center;
+    width: 85%;
+    height: 300px;
+    max-width: 1200px;
+    background-image: url("res/people-working.jpg");
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* media queries */
+@media (max-width: 610px) {
+    body {
+        margin: 0;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 0.1fr 0.2fr 0.1fr;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .mainContent {
+        display: block;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .project {
+        display: grid;
+        grid-template-rows: 6fr 1fr 3fr;
+        gap: 5px;
+        max-width: 700px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 20px
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--bg-color);
+        padding-left: var(--side-padding);
+        padding-right: var(--side-padding);
+        padding-top: var(--top-bot-padding);
+        padding-bottom: var(--top-bot-padding);
+        position: relative;
+    }
+}
+
+/* fonts */
+.playfair-display-1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
