@@ -34,3 +34,6 @@ Before you move on, we would love it if you could submit your feedback on the In
 
 ### Objective Image
 ![Goal to replicate](res/dashboard-project.png)
+
+### Result Image
+![Photo of final site](res/result.png)
