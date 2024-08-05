@@ -1,0 +1,11 @@
+:root {
+    --bg-color: rgb(57, 144, 194);
+}
+
+.buttonCard {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
