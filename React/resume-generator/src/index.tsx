@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HeaderBar from './components/header';
-import SmallInputField from './components/input-field-small';
+import ResumeLayout from './components/ResumeLayout';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <HeaderBar></HeaderBar>
-    <SmallInputField label='Name' id='name-input' value='' placeholder='Joe'></SmallInputField>
+    <ResumeLayout></ResumeLayout>
   </React.StrictMode>
 );
 
