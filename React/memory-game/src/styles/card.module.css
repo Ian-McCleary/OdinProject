@@ -1,11 +1,32 @@
 :root {
     --bg-color: rgb(57, 144, 194);
 }
+@font-face {
+    font-family: 'pokemonk';
+    src: url('../fonts/PocketMonk.ttf');
+  }
 
-.buttonCard {
+.cardBtn {
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.cardTxt {
+    font-family: 'pokemonk';
+    font-size: 2rem;
+}
+
+.cardImg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    max-width: 200px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    position: relative;
+}
+

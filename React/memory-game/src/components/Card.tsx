@@ -6,16 +6,18 @@ export default function Card({label, image}: ICardProp){
 
     /**Returns the label text place on the card button */
     function cardLabel({label}: ICardProp) {
-        return (<span></span>)
+        return (<span className={styles.cardTxt}>{label}</span>)
     }
 
     /** Returns the image placed on the card button */
     function cardImage({image}: ICardProp) {
-        return (<div></div>)
+        return (
+            <div className={styles.cardImg} style={{backgroundImage: "url(" + image + ")"}}></div>
+        )
     }
 
     return (
-        <button className={styles.buttonCard}>
+        <button className={styles.cardBtn}>
             {cardImage({label, image})}
             {cardLabel({label, image})}
         </button>
