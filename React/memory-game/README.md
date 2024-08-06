@@ -26,3 +26,6 @@ You will also see any lint errors in the console.
 ### Objective Image
 ![Goal to replicate.](public/target.png)
 
+### Result Image
+![Result image of website.](public/result.png)
+

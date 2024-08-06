@@ -1,49 +1,44 @@
 import Card from "./Card";
 import styles from "../styles/cardGrid.module.css"
-import IPokeProp from "../interfaces/IPokeAPI";
-import getPokemon from "../services/GetService";
-
-import { useState, useEffect } from "react";
+import IScore from "../interfaces/IScore";
 
 
-export default function CardGrid() {
+export default function CardGrid({ score, scoreCallback}: IScore) {
 
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
-    const pokemonNames = ["gyarados", "ditto"];
+    const pokemonNames = ["gyarados", "ditto", "crobat", "seadra", "electabuzz", "weedle", "golbat", "garchomp", "inteleon", "azelf", "bastiodon", "eternatus"];
 
-    const [pokeList, setPokeList] = useState<IPokeProp[]>([]);
-
-    useEffect(() => {
-        // pokemonNames.forEach(async element => {
-        //     const url = baseUrl + element;
-        //     const pmon = await getPokemon(url);
-        //     setPokeList(prev => [...prev, pmon]);
-        // });
-        getAllPokemons()
-    }, []);
-
-    async function getAllPokemons() {
-        const initList: IPokeProp[] = []
-        for (var pokemon of pokemonNames) {
-            const url = baseUrl + pokemon;
-            const pmon = await getPokemon(url);
-            initList.push(pmon)
+    /**shuffle the list of pokemonNames so theyre random */
+    function shuffle(array: string[]) {
+        let currentIndex = array.length;
+      
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+      
+          // Pick a remaining element...
+          let randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
         }
-        setPokeList(initList)
     }
 
+    shuffle(pokemonNames)
+
+    
+
+
     /** get pokemon card objects from url and name */
-    function getCardForPokemon(pokeObject: IPokeProp) {
-        console.log(pokeObject.name);
+    function getCardForPokemon(api_url: string) {
         return (
-            //TODO give carde name of pokemon and let it do lookup with useEfect and state list
-            <Card key={pokeObject.name} label={pokeObject.name} image={pokeObject.sprites.front_default}></Card>
+            <Card key={api_url} url={api_url} score= {score} scoreCallback={scoreCallback}></Card>
         )
     }
 
     return (
         <div className={styles.cardGrid}>
-            {pokeList.map(i => getCardForPokemon(i))}
+            {pokemonNames.map(i => getCardForPokemon(baseUrl + i))}
         </div>
     )
 }
