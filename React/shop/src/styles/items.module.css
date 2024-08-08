@@ -1,0 +1,52 @@
+
+.shopItemContainer {
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 0.3fr 0.1fr 0.1fr;
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+}
+
+.shopItemImage {
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    min-width: 250px;
+    max-height: 200px;
+}
+
+.shopItemTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.shopItemDescription {
+    font-size: 0.9rem;
+}
+
+.shopItemCartButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: last baseline;
+    justify-content: right;
+    gap: 5px;
+}
+
+.quantityLabel {
+    font-size: 0.8rem;
+}
+.quantityInput {
+    max-width: 30px;
+}
+
+.addToCartButton {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.addToCartButton:hover {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
