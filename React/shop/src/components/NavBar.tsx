@@ -6,11 +6,9 @@ export default function NavBar() {
     const navigate = useNavigate()
 
     function onClickHome() {
-        console.log("clicked home")
         navigate("/")
     }
     function onClickProducts() {
-        console.log("clicked products")
         navigate("/shop")
     }
     return (

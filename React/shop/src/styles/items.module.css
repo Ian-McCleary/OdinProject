@@ -23,6 +23,22 @@
     font-size: 0.9rem;
 }
 
+.shopPriceContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.previousPrice {
+    color: red;
+}
+
+.newPrice {
+    color: rgb(4, 165, 4);
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
 .shopItemCartButtons {
     display: flex;
     flex-direction: row;

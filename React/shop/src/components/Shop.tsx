@@ -25,7 +25,6 @@ export default function Shop() {
         if (item == null){
             return
         }
-        console.log(currentCart.products)
         // check if this item is already in the cart and add quantity if so
         for (let i = 0; i < currentCart.products.length; i++) {
             // found item in card with same id
@@ -60,7 +59,7 @@ export default function Shop() {
     return (
         <div className={styles.shopContainer}>
             <div className={styles.itemGrid}>
-                {itemNumbers.map((i) => <ShopItem url={"https://fakestoreapi.com/products/" + i} addToCart={addToCart}></ShopItem>)}
+                {itemNumbers.map((i) => <ShopItem key={i} url={"https://fakestoreapi.com/products/" + i} addToCart={addToCart}></ShopItem>)}
             </div>
             <Cart currentCart={currentCart}></Cart>
         </div>

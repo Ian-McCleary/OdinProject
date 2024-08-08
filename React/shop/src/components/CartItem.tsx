@@ -7,11 +7,10 @@ interface IProps {
 }
 
 export default function CartItem({item}: IProps) {
-    console.log(item.product.image)
     return (
         <div className={styles.cartItem}>
             <div className={styles.cartItemImage} style={{backgroundImage: "url(" + item.product.image + ")"}}></div>
-            <div className={styles.cart}>{item.product.title}</div>
+            <div className={styles.cartItemTitle}>{item.product.title.slice(0, 45)}</div>
             <div className={styles.cartItemQuantity}>Qty: {item.quantity}</div>
         </div>
     )

@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, RouterProviderProps, Router, Outle
 export default function MainContent() {
 
     return (
-        <div style={{padding: "25px"}}>
+        <div style={{height: "100vh"}}>
             <Outlet></Outlet>
         </div>
         
