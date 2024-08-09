@@ -1,0 +1,41 @@
+.libraryContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 25px;
+}
+
+.libraryTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.createBookButton {
+    background-color: rgb(50, 218, 72);
+    font-weight: bold;
+    max-width: 200px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+
+.bookGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+}
+
+
+.bookContainer {
+    padding: 10px;
+}
+
+.addBookForm {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
