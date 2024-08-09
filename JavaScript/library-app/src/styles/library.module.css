@@ -21,17 +21,24 @@
     border-color: rgba(0, 0, 0, 0);
 }
 
+.bookTitle {
+    font-weight: bold;
+}
 
 .bookGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 20px;
+    padding: 20px;
 }
 
 
 .bookContainer {
     padding: 10px;
+    box-shadow: 0 15px 23px 0 rgba(0, 0, 0, 0.2), 0 13px 27px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    border-color: rgb(83, 83, 83);
 }
 
 .addBookForm {

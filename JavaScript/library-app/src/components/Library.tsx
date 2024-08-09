@@ -12,21 +12,21 @@ export function Library() {
 
     /** add new book to library using user entered inputs */
     function addBook(){
-        let cTitle = enteredTitle
+        let cTitle = enteredTitle.slice(0, enteredTitle.length)
         let book:IBook = {
             title: cTitle,
             pages: enteredPages,
             hasRead: false,
-            removeBook: () => removeBook(book),
         };
         setBookList([...bookList,book]);
     }
 
     /** remove book from library */
-    function removeBook(book: IBook){
-        let newList = bookList.filter(item => item.title !== book.title)
-        console.log(newList)
-        setBookList(newList)
+    function removeBook(bookTitle: string){
+        //let newList = bookList.filter(item => item.title !== book.title)
+        console.log(bookTitle)
+        setBookList(bookList.filter(item => item.title !== bookTitle))
+        console.log(bookList)
     }   
 
     /** update title from input */
@@ -59,7 +59,7 @@ export function Library() {
                 <button className={styles.createBookButton} onClick={() => addBook()}>Add Book</button>
             </div>
             <div className={styles.bookGrid}>
-                {bookList.map((i) => <Book title={i.title} pages={i.pages} hasRead={i.hasRead} removeBook={() => removeBook(i)}></Book>)}
+                {bookList.map((i) => <Book key={i.title} title={i.title} pages={i.pages} hasRead={i.hasRead} removeBook={removeBook}></Book>)}
             </div>
         </div>
     )
