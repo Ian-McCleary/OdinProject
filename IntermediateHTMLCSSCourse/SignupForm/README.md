@@ -24,3 +24,6 @@ Validating that the password fields match each other requires JavaScript. Using 
 
 ### Objective Image
 ![Goal to replicate.](res/sign-up-form.png)
+
+### Result Image
+![Photo of final site.](res/result.png)
