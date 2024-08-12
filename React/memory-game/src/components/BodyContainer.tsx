@@ -6,9 +6,8 @@ import { useState } from "react"
 
 export default function BodyContainer() {
     
-    let initList: string[] = []
     const [scoreCounter, setScoreCounter] = useState(0);
-    const [prevClickedPokemon, setPrevClickedPokemon] = useState(initList)
+    const [prevClickedPokemon, setPrevClickedPokemon] = useState<string[]>([])
 
     
     
@@ -19,10 +18,8 @@ export default function BodyContainer() {
             setScoreCounter(0)
             setPrevClickedPokemon([])
         } else {
-            setScoreCounter(scoreCounter + 1);
-            let intermediate = prevClickedPokemon
-            intermediate.push(currentPokemon)
-            setPrevClickedPokemon(intermediate)
+            setScoreCounter(prev => prev + 1);
+            setPrevClickedPokemon(prev => [...prev, currentPokemon])
         }
     }
 
