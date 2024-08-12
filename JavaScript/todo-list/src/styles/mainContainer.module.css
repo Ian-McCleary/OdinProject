@@ -1,0 +1,32 @@
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 25px;
+    padding: 50px;
+}
+
+.siteTitle{
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    padding: 5px;
+    background-color: red;
+}
+
+.projectTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.toDoList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
