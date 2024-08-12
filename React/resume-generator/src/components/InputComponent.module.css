@@ -1,0 +1,19 @@
+.inputField {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+
+  .inputSmall {
+    width: 100px;
+  }
+
+  .inputLarge {
+    width: 400px;
+    height: 300px;
+  }
+
+  .labelText {
+    font-weight: bold;
+  }
+  

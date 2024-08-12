@@ -34,3 +34,10 @@ Before you move on, we would love it if you could send us your feedback on the A
 
 ### Objective Image Mobile
 ![Goal to replicate.](res/portfolio-mobile.png)
+
+### Result Image Desktop
+![Result on desktop.](res/result-desktop.png)
+
+### Result Images Mobile
+![Result on mobile top half of site.](res/result-mobile1.png)
+![Result on mobile bottom half of site.](res/result-mobile2.png)
