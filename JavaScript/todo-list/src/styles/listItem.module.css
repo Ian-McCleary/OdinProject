@@ -2,8 +2,44 @@
 .itemName {
     font-weight: bold;
     font-size: 1.05rem;
+    padding: 5px;
 }
 
 .itemDescription {
     font-size: 0.95rem;
+    padding: 5px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.toDoItem {
+    background-color: rgb(209, 219, 228);
+    box-shadow: 0 8px 16px 0 rgba(255, 2550, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.toDoContent {
+    display: grid;
+    grid-template-columns: 0.9fr 0.1fr;
+    grid-template-rows: 1fr;
+}
+
+.toDoCheckbox {
+    border-radius: 5px;
+}
+
+.checkBoxContainer {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.deleteButton {
+    background-color: lightcoral;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,0);
 }

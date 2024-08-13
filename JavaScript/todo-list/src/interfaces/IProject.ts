@@ -1,7 +1,7 @@
 export interface IListItem {
     name: string,
     description: string,
-    isComplete: boolean
+    isComplete: boolean,
 }
 
 export interface IProject {
