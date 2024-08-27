@@ -1,36 +1,36 @@
 import { useState } from "react";
 import GridButton from "./GridButton";
-import styles from "../styles/tictactoe.module.css"
+import styles from "../styles/tictactoe.module.css";
 
 /** TicTacToe game */
 export default function TicTacToe() {
-    const [gameBoard, setGameBoard] = useState<number[]>(new Array(9).fill(0))
-    const [currentPlayer, setCurrentPlayer] = useState(1)
-    const [playerHasWon, setPlayerHasWon] = useState(false)
+    const [gameBoard, setGameBoard] = useState<number[]>(new Array(9).fill(0));
+    const [currentPlayer, setCurrentPlayer] = useState(1);
+    const [playerHasWon, setPlayerHasWon] = useState(false);
     
 
     const game = (function() {
         /** attempts for player to take turn at grid cell. switches the current player*/
         const takeTurn = (position: number) => {
-            console.log("player " + currentPlayer + " has moved to " + position)
+            console.log("player " + currentPlayer + " has moved to " + position);
             if (0 <= position && position < gameBoard.length && gameBoard[position] == 0) {
-                let newBoard = gameBoard
-                newBoard[position] = currentPlayer
-                setGameBoard(newBoard)
-                let won = hasWon()
-                setPlayerHasWon(won)
+                let newBoard = gameBoard;
+                newBoard[position] = currentPlayer;
+                setGameBoard(newBoard);
+                const won = hasWon();
+                setPlayerHasWon(won);
                 if (won) {
-                    return
+                    return;
                 }
-                changeCurrentPLayer()
+                changeCurrentPLayer();
             }
         }
         /** changes the current player between 1 and 2 */
         const changeCurrentPLayer = () => {
             if (currentPlayer == 1){
-                setCurrentPlayer(2)
+                setCurrentPlayer(2);
             } else {
-                setCurrentPlayer(1)
+                setCurrentPlayer(1);
             }
         }
 
@@ -52,19 +52,19 @@ export default function TicTacToe() {
             for (let i = 0; i < winningCombos.length; i++) {
                 let win = winningCombos[i];
                 if (gameBoard[win[0]] == currentPlayer && gameBoard[win[1]] == currentPlayer && gameBoard[win[2]] == currentPlayer) {
-                    return true
+                    return true;
                 }
             } 
-            return false
+            return false;
         }
         
         /** reset the game, the current player and the win variable */
         const resetGame = () => {
-            setGameBoard(new Array(9).fill(0))
-            setCurrentPlayer(1)
-            setPlayerHasWon(false)
+            setGameBoard(new Array(9).fill(0));
+            setCurrentPlayer(1);
+            setPlayerHasWon(false);
         }
-        return {takeTurn, hasWon, resetGame}
+        return {takeTurn, hasWon, resetGame};
     })();
 
     /**msg to display when a player has won */

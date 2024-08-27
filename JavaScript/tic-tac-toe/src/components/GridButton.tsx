@@ -12,12 +12,12 @@ export default function GridButton({id, onClick, disabled, whoClicked}: IProps) 
 
     const textValue = () => {
         if (whoClicked == 1){
-            return "X"
+            return "X";
         } else if (whoClicked == 2) {
-            return "O"
+            return "O";
         }
         return ""
     }
 
-    return (<button className={styles.gridButton} onClick={() => onClick(id)} disabled={disabled}>{textValue()}</button>)
+    return (<button className={styles.gridButton} onClick={() => onClick(id)} disabled={disabled}>{textValue()}</button>);
 }
