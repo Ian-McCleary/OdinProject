@@ -1,0 +1,16 @@
+.homeImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/public/home-background.jpg");
+    height: 100%;
+}
+
+.homeTitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    padding-top: 30vh;
+    text-shadow: 8px 8px 5px rgb(0, 0, 0) ;
+}
