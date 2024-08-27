@@ -1,0 +1,44 @@
+.weatherGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 25px;
+    padding: 50px;
+}
+
+.weatherTile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-content: center;
+    min-height: 200px;
+    padding: 10px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-size: 1.2rem;
+}
+
+.weatherDate {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.weatherUV {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.weatherTemps {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 1.6rem;
+    justify-content: center;
+}
