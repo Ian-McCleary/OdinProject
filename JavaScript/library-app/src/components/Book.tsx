@@ -13,9 +13,7 @@ export default function Book({ title, pages, hasRead, removeBook}: IProps) {
     function readBook() {
         console.log("clicked readbook")
         let newBook = {...currentBook, hasRead: true}
-        console.log(newBook)
         setCurrentBook(newBook)
-        console.log(currentBook)
     }
 
     return (

@@ -12,8 +12,8 @@ export function Library() {
 
     /** add new book to library using user entered inputs */
     function addBook(){
-        let cTitle = enteredTitle.slice(0, enteredTitle.length)
-        let book:IBook = {
+        const cTitle = enteredTitle.slice(0, enteredTitle.length)
+        const book:IBook = {
             title: cTitle,
             pages: enteredPages,
             hasRead: false,
@@ -24,9 +24,7 @@ export function Library() {
     /** remove book from library */
     function removeBook(bookTitle: string){
         //let newList = bookList.filter(item => item.title !== book.title)
-        console.log(bookTitle)
         setBookList(bookList.filter(item => item.title !== bookTitle))
-        console.log(bookList)
     }   
 
     /** update title from input */
