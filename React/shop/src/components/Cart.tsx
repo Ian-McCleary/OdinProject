@@ -14,9 +14,7 @@ export default function Cart({ currentCart }: IProps) {
 
     /** Cart total amount */
     const sum = () => {
-        let total = 0;
-        currentCart.products.map((i) => total += (i.quantity * i.product.price));
-        return total.toFixed(2);
+        return currentCart.products.reduce((total, current) => total + (current.quantity * current.product.price), 0).toFixed(2)
     }
 
     return (

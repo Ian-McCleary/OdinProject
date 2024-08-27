@@ -25,23 +25,19 @@ export default function Shop() {
         if (item == null){
             return
         }
-        // check if this item is already in the cart and add quantity if so
-        for (let i = 0; i < currentCart.products.length; i++) {
-            // found item in card with same id
-            if (currentCart.products[i].product.id == item.id) {
-                // create new product list with updated quantity for item with same id
-                let newProducts = [...currentCart.products];
-                // update quantity
-                newProducts[i].quantity += count;
-                // create new cart and set products.
-                let newCart = {...currentCart,
-                    products: newProducts
-                }
-                setCurrentCart(newCart)
-                return
+        const existingItemIndex = currentCart.products.findIndex((i) => i.product.id == item.id)
+        if (existingItemIndex > 0){
+            // create new product list with updated quantity for item with same id
+            let newProducts = [...currentCart.products];
+            // update quantity
+            newProducts[existingItemIndex].quantity += count;
+            // create new cart and set products.
+            let newCart = {...currentCart,
+                products: newProducts
             }
+            setCurrentCart(newCart)
+            return
         }
-
         // item is not in cart and needs to be added
         let newProduct: ICartItem = {
             product: item,
